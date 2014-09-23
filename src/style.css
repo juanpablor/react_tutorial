@@ -1,0 +1,159 @@
+* {
+  boxSizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "HelveticaNeue-CondensedBold",Helvetica;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+body{
+  background: rgb(54, 71, 96);
+}
+
+header {
+max-width: 270px;
+margin: 60px auto 0;
+text-align: center;
+}
+header img {
+  max-width: 100%;
+  max-height: 225px;
+}
+
+h1.banner {
+  opacity: 0;
+  font-family: Helvetica;
+  color: #444;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 0;
+  text-align: center;
+  -webkit-user-select: none;
+  font-size: 5vh; /* Chrome bug prevents resizing on window resize! */
+  width: 100%;    /* Putting width 100% causes repaint on resize */
+}
+
+h1.banner.fadeIn {
+  opacity: 1;
+  transition: opacity 3s ease-in;
+}
+
+/* form-signin */
+
+.form-signin {
+  max-width: 270px;
+  padding: 15px;
+  margin: 0 auto;
+}
+  .form-signin-heading, .checkbox {
+    margin-bottom: 10px;
+  }
+
+  .checkbox {
+    font-weight: normal;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 18px;
+  }
+
+  .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .form-control:focus {
+    z-index: 2;
+  }
+
+  input {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: #242D33;
+  }
+
+  input:focus {
+    border: 1px solid #364760;
+  }
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    background: #f6f9fd;
+    float: left;
+  }
+
+  input[type='checkbox'] + span {
+    float: left;
+    margin-top: -3px;
+    padding: 10px;
+    color: #5B7180;
+    font-weight: 600;
+  }
+
+  input[type='checkbox']:checked {
+    background: #364760;
+    /*box-shadow: inset 0px 1px 1px 1px #569cec;*/
+  }
+
+  input[type='checkbox']:checked:before {
+    content: '';
+    background: url(/checkmark-icon.png) no-repeat;
+    background-size: 25px;
+    width: 25px;
+    float: left;
+    height: 25px;
+    position: relative;
+    left: 2px;
+    top: 4px;
+    color: #fff;
+  }
+
+  button, input[type='submit'] {
+    font-size: 18px;
+    background-color: #28394f;
+    border: 1px solid #202c3d;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    margin-top: 18px;
+  }
+
+/* end form-signin */
+
+/* footer */
+
+footer {
+  margin-top: 70px;
+}
+  div {
+    max-width: 270px;
+    margin: 0 auto;
+    text-align: center;
+  }
+footer div img {
+      max-width: 100%;
+      max-height: 100px;
+    }
+  
+
+footer div.footerText {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #a0acbf;
+    font-weight: 600;
+  }
+
+
+/* end footer*/
