@@ -6,7 +6,7 @@ var Banner = React.createClass({
   render: function() {
     return (
       <header>
-        <img src="./elements/commons/onboard-logo.png" />
+        <img src="./core/images/onboard-logo.png" />
       </header>
     );
   }
