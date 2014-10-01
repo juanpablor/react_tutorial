@@ -8,15 +8,10 @@ var Menu = React.createClass({
   	var divStyle = {
   		display: 'none'
   	}
-    var temp = {
-        height: '60px',
-        width: '300px;',
-        background: 'red'
-    }
+    var dashboardMenu = "dashboard-menu-open"
 
     return (
-         <nav id="dashboard-menu" className="dashboard-menu dashboard-menu-open">
-
+         <nav id="dashboard-menu" className="dashboard-menu">
             <ul className='leftSide'>
                 <li className='logoBox'></li>
                 <li className='sideNav'>
@@ -26,6 +21,80 @@ var Menu = React.createClass({
                         </svg>
                         Dashboards
                     </p>
+                    <ul>
+                        <li page-id="9d507e71-7a73-49ce-a99a-854d16186f25"  className="pageButton">
+                        <svg  className="line" viewBox="0 0 21 40">
+                        <g>
+                            <polygon points="1,39 1,0 0,0 0,39 0,39 0,40 21,40 21,39"></polygon>
+                            <circle cx="19" cy="39.5" r="2"></circle>
+                        </g>
+                        </svg>
+                        <span>Today</span>
+                        <svg  className="favorite favorited" viewBox="0 0 14.6 15.2">
+                            <path d="M9.8,5.6l4.5,0c0.2,0,0.3,0.2,0.2,0.4L11,9.5  c-0.1,0.1-0.1,0.1-0.1,0.2l1.8,5.2c0.1,0.2-0.1,0.4-0.3,0.3l-4.9-3c-0.1,0-0.2,0-0.2,0l-5.1,3c-0.2,0.1-0.4-0.1-0.3-0.3l1.8-5.2  c0-0.1,0-0.2-0.1-0.2L0.1,6c-0.1-0.1,0-0.4,0.2-0.4l4.6,0C4.9,5.6,5,5.5,5,5.4l2.1-5.3C7.2,0,7.5,0,7.5,0.1l2.1,5.3  C9.6,5.5,9.7,5.6,9.8,5.6z"></path>
+                        </svg>
+                        </li>
+                        <li page-id="624c7c33-4c68-4394-97e4-1b16560d7fa1"  className="pageButton current">
+                            <svg  className="line" viewBox="0 0 21 40">
+                                <g>
+                                    <polygon points="1,39 1,0 0,0 0,39 0,39 0,40 21,40 21,39"></polygon>
+                                    <circle cx="19" cy="39.5" r="2"></circle>
+                                </g>
+                            </svg>
+                            <span>This Week</span>
+                            <svg  className="favorite" viewBox="0 0 14.6 15.2">
+                                <path d="M9.8,5.6l4.5,0c0.2,0,0.3,0.2,0.2,0.4L11,9.5  c-0.1,0.1-0.1,0.1-0.1,0.2l1.8,5.2c0.1,0.2-0.1,0.4-0.3,0.3l-4.9-3c-0.1,0-0.2,0-0.2,0l-5.1,3c-0.2,0.1-0.4-0.1-0.3-0.3l1.8-5.2  c0-0.1,0-0.2-0.1-0.2L0.1,6c-0.1-0.1,0-0.4,0.2-0.4l4.6,0C4.9,5.6,5,5.5,5,5.4l2.1-5.3C7.2,0,7.5,0,7.5,0.1l2.1,5.3  C9.6,5.5,9.7,5.6,9.8,5.6z"></path>
+                            </svg>
+                        </li>
+                        <li page-id="a7d376fb-1d0d-4b14-a53d-7e7bb2649a01"  className="pageButton">
+                            <svg  className="line" viewBox="0 0 21 40">
+                                <g>
+                                    <polygon points="1,39 1,0 0,0 0,39 0,39 0,40 21,40 21,39"></polygon>
+                                    <circle cx="19" cy="39.5" r="2"></circle>
+                                </g>
+                            </svg>
+                            <span>This Month</span>
+                            <svg  className="favorite" viewBox="0 0 14.6 15.2">
+                                <path d="M9.8,5.6l4.5,0c0.2,0,0.3,0.2,0.2,0.4L11,9.5  c-0.1,0.1-0.1,0.1-0.1,0.2l1.8,5.2c0.1,0.2-0.1,0.4-0.3,0.3l-4.9-3c-0.1,0-0.2,0-0.2,0l-5.1,3c-0.2,0.1-0.4-0.1-0.3-0.3l1.8-5.2  c0-0.1,0-0.2-0.1-0.2L0.1,6c-0.1-0.1,0-0.4,0.2-0.4l4.6,0C4.9,5.6,5,5.5,5,5.4l2.1-5.3C7.2,0,7.5,0,7.5,0.1l2.1,5.3  C9.6,5.5,9.7,5.6,9.8,5.6z"></path>
+                            </svg>
+                        </li>
+                        <li page-id="6d3ff962-009c-4f6a-976e-2cd20f59e0b2"  className="pageButton">
+                            <svg  className="line" viewBox="0 0 21 40">
+                                <g>
+                                    <polygon points="1,39 1,0 0,0 0,39 0,39 0,40 21,40 21,39"></polygon>
+                                    <circle cx="19" cy="39.5" r="2"></circle>
+                                </g>
+                            </svg>
+                            <span>All Time</span>
+                            <svg  className="favorite" viewBox="0 0 14.6 15.2">
+                                <path d="M9.8,5.6l4.5,0c0.2,0,0.3,0.2,0.2,0.4L11,9.5  c-0.1,0.1-0.1,0.1-0.1,0.2l1.8,5.2c0.1,0.2-0.1,0.4-0.3,0.3l-4.9-3c-0.1,0-0.2,0-0.2,0l-5.1,3c-0.2,0.1-0.4-0.1-0.3-0.3l1.8-5.2  c0-0.1,0-0.2-0.1-0.2L0.1,6c-0.1-0.1,0-0.4,0.2-0.4l4.6,0C4.9,5.6,5,5.5,5,5.4l2.1-5.3C7.2,0,7.5,0,7.5,0.1l2.1,5.3  C9.6,5.5,9.7,5.6,9.8,5.6z"></path>
+                            </svg>
+                        </li>
+                        <li page-id="3ce463e0-623d-4123-aba2-ae9631c6fcf0"  className="pageButton">
+                            <svg  className="line" viewBox="0 0 21 40">
+                                <g>
+                                    <polygon points="1,39 1,0 0,0 0,39 0,39 0,40 21,40 21,39"></polygon>
+                                    <circle cx="19" cy="39.5" r="2"></circle>
+                                </g>
+                            </svg>
+                            <span>Submissions</span>
+                            <svg  className="favorite favorited" viewBox="0 0 14.6 15.2">
+                                <path d="M9.8,5.6l4.5,0c0.2,0,0.3,0.2,0.2,0.4L11,9.5  c-0.1,0.1-0.1,0.1-0.1,0.2l1.8,5.2c0.1,0.2-0.1,0.4-0.3,0.3l-4.9-3c-0.1,0-0.2,0-0.2,0l-5.1,3c-0.2,0.1-0.4-0.1-0.3-0.3l1.8-5.2  c0-0.1,0-0.2-0.1-0.2L0.1,6c-0.1-0.1,0-0.4,0.2-0.4l4.6,0C4.9,5.6,5,5.5,5,5.4l2.1-5.3C7.2,0,7.5,0,7.5,0.1l2.1,5.3  C9.6,5.5,9.7,5.6,9.8,5.6z"></path>
+                            </svg>
+                        </li>
+                        <li page-id="d8fab1f9-3a24-49ea-8084-2762adf962b0"  className="pageButton">
+                            <svg  className="line" viewBox="0 0 21 40">
+                                <g>
+                                    <polygon points="1,39 1,0 0,0 0,39 0,39 0,40 21,40 21,39"></polygon>
+                                    <circle cx="19" cy="39.5" r="2"></circle>
+                                </g>
+                            </svg>
+                            <span>Productivity</span>
+                            <svg  className="favorite favorited" viewBox="0 0 14.6 15.2">
+                                <path d="M9.8,5.6l4.5,0c0.2,0,0.3,0.2,0.2,0.4L11,9.5  c-0.1,0.1-0.1,0.1-0.1,0.2l1.8,5.2c0.1,0.2-0.1,0.4-0.3,0.3l-4.9-3c-0.1,0-0.2,0-0.2,0l-5.1,3c-0.2,0.1-0.4-0.1-0.3-0.3l1.8-5.2  c0-0.1,0-0.2-0.1-0.2L0.1,6c-0.1-0.1,0-0.4,0.2-0.4l4.6,0C4.9,5.6,5,5.5,5,5.4l2.1-5.3C7.2,0,7.5,0,7.5,0.1l2.1,5.3  C9.6,5.5,9.7,5.6,9.8,5.6z"></path>
+                            </svg>
+                        </li>
+                    </ul>
                 </li>
                 <li className="link_users">
                     <a className='link' href="../users">
@@ -100,8 +169,6 @@ var Menu = React.createClass({
                         <li id="addPage" style={divStyle}><span>item2</span></li>
                     </ul>
                 </li>
-
-
                 <li className="right">
                     <ul>
                         <li className="fav_users">
@@ -135,6 +202,4 @@ var Menu = React.createClass({
     );
   }
 });
-
-
 module.exports = Menu;

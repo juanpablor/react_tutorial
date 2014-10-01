@@ -124,6 +124,15 @@
                 padding: 0 40px;
                 padding-right: 0;
                 color: #a0acc1;
+
+                svg {
+                    height: 16px;
+                    width: 16px;
+                    fill: #a0acc1;
+                }
+                span {
+                    font-size: 14px;
+                }
             }
 
             &:hover {
@@ -171,6 +180,7 @@
 
                 span {
                     float: left;
+                    font-size: 14px;
                 }
                 &:hover {
                     color: #a0acc1;
@@ -232,7 +242,7 @@
 
         li.logoBox {
             height: 60px;
-/*            background: url(../img/onboard-logo.png);*/
+            background: url(../images/onboard-logo.png);
             background-repeat: no-repeat;
             background-size: 148px 33px;
             background-position: 15% 45%;
