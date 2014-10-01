@@ -19,11 +19,12 @@ var http = require('http');
 var optimist = require('optimist');
 var path = require('path');
 var reactMiddleware = require('react-page-middleware');
+var connectRoute = require('connect-route');
 
 var argv = optimist.argv;
 
 var PROJECT_ROOT = __dirname;
-var FILE_SERVE_ROOT = path.join(PROJECT_ROOT, 'src');
+var FILE_SERVE_ROOT = path.join(PROJECT_ROOT, 'scripts');
 
 var port = argv.port;
 
@@ -90,6 +91,18 @@ if (!isServer) {
     .use(connect.logger())
     .use(connect.compress())
     .use(connect.errorHandler());
+//     .use(connectRoute(function (router) {
+//     router.get('/', function (req, res, next) {
+//         res.end('index');
+//     });
+
+//     router.get('/users.html', function (req, res, next) {
+//         res.end('users');
+//     });
+
+
+// }));
+
 
   var portToUse = port || 8080;
   http.createServer(app).listen(portToUse);

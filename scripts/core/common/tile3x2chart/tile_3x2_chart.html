@@ -1,0 +1,130 @@
+<template name="tile_3x2_chart">
+    <div class='front'>
+        <div class="setting_span hideable">
+            {{#if permission}}
+                <div class="drag_btn"></div>
+            {{/if}}
+            <span class="title_area"><span class='tile_title'></span></span>
+            {{#if permission}}
+                <div class="settings setting_btn swap_btn pull-right"></div>
+            {{/if}}
+        </div>
+        <div class='contents'><div class='tileLoader'><span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span></div></div>
+    </div>
+    {{#if permission}}
+        <div class='back'>
+            <div class='setting_span'>
+                <button class='swap_btn save_btn first'>Save</button>
+            </div>
+            <div class='contents'>
+                <div class='settings'>
+                    <select setFilt='type' class='type'>
+                        <option value='pie'>Pie Chart</option>
+                        <option value='line' selected>Line Chart</option>
+                        <option value='spline'>Spline Chart</option>
+                        <option value='bar'>Bar Chart</option>
+                        <option value='scatter'>Scatter Chart</option>
+                        <option value='area'>Area Chart</option>
+                        <option value='donut'>Donut Chart</option>
+                    </select><br />
+                    Display Ranger?<input setFilt='subchart' class='subchart' type='checkbox' value='range' /><br />
+                    Display Legend?<input setFilt='legend' class='legend' type='checkbox' value='legend' /><br />
+                    Zoom Chart?<input setFilt='zoom' class='zoom' type='checkbox' value='zoom' /><br />
+                    Incoming Date Column(s)<input setFilt='dateColumn' type='text' value='' /><br />
+                    Incoming Date Format<input setFilt='dateInFormat' type='text' value='' /><br />
+                    Outgoing Date Format<select setFilt='dateOutFormat'>
+                        <option value='DD/MM/YYYY'>DD/MM/YYYY</option>
+                        <option value='MM/DD/YYYY'>MM/DD/YYYY</option>
+                        <option value='YYYY/MM/DD'>YYYY/MM/DD</option>
+                        <option value='YYYY/MM/DD HH'>YYYY/MM/DD HH</option>
+                        <option value='DD-MM-YYYY'>DD-MM-YYYY</option>
+                        <option value='MM-DD-YYYY'>MM-DD-YYYY</option>
+                        <option value='YYYY-MM-DD'>YYYY-MM-DD</option>
+                        <option value='YYYY-MM-DD HH'>YYYY-MM-DD HH</option>
+                        <option value='DD MM YYYY'>DD MM YYYY</option>
+                        <option value='MM DD YYYY'>MM DD YYYY</option>
+                        <option value='YYYY MM DD'>YYYY MM DD</option>
+                        <option value='YYYY MM DD HH'>YYYY MM DD HH</option>
+                        <option value='ddd'>Day of Week</option>
+                        <option value='Do MMM'>Day of Month</option>
+                        <option value='MMM'>MMM</option>
+                        <option value='YYYY'>YYYY</option>
+                        <option value='HH:00'>HH</option>
+                        <option value='HH:mm'>HH:mm</option>
+                    </select><br />
+                </div>
+                <div class='filter'>
+                </div>
+                <div class='source'>
+                    Report:<select setFilt='report'>
+                        {{#each reports}}
+                            <option value='{{id}}'>{{name}}</option>
+                        {{/each}}
+                    </select><br />
+                    Range:<input setFilt='report_range' type='text' /><br />
+                    Include:<input setFilt='report_include' type='text' /><br />
+                    Exclude:<input setFilt='report_exclude' type='text' /><br />
+                    Test:<input setFilt='report_test' type='text' /><br />
+                    Gather:<input setFilt='report_gather' type='text' /><br />
+                </div>
+            </div>
+        </div>
+    {{/if}}
+</template>
+
+<template name="tile_3x2_chart_modal">
+    <div class="tile_3x2_chart_modal modal floatLeftSlide">
+        <span class="closeModalButton">x</span>
+        <span class="title">Create a new 3x2 Chart Tile</span>
+        <div class="form">
+            <div class='source'>
+                Report:<select setFilt='report'>
+                    {{#each reports}}
+                        <option value='{{id}}'>{{name}}</option>
+                    {{/each}}
+                </select><br />
+                Range:<input setFilt='report_range' type='text' /><br />
+                Include:<input setFilt='report_include' type='text' /><br />
+                Exclude:<input setFilt='report_exclude' type='text' /><br />
+                Test:<input setFilt='report_test' type='text' /><br />
+                Gather:<input setFilt='report_gather' type='text' /><br />
+                Incoming Date Column(s)<input setFilt='dateColumn' type='text' value='' /><br />
+                Incoming Date Format<input setFilt='dateInFormat' type='text' value='' /><br />
+                Outgoing Date Format<select setFilt='dateOutFormat'>
+                    <option value='DD/MM/YYYY'>DD/MM/YYYY</option>
+                    <option value='MM/DD/YYYY'>MM/DD/YYYY</option>
+                    <option value='YYYY/MM/DD'>YYYY/MM/DD</option>
+                    <option value='YYYY/MM/DD HH'>YYYY/MM/DD HH</option>
+                    <option value='DD-MM-YYYY'>DD-MM-YYYY</option>
+                    <option value='MM-DD-YYYY'>MM-DD-YYYY</option>
+                    <option value='YYYY-MM-DD'>YYYY-MM-DD</option>
+                    <option value='YYYY-MM-DD HH'>YYYY-MM-DD HH</option>
+                    <option value='DD MM YYYY'>DD MM YYYY</option>
+                    <option value='MM DD YYYY'>MM DD YYYY</option>
+                    <option value='YYYY MM DD'>YYYY MM DD</option>
+                    <option value='YYYY MM DD HH'>YYYY MM DD HH</option>
+                    <option value='ddd'>Day of Week</option>
+                    <option value='Do MMM'>Day of Month</option>
+                    <option value='MMM'>MMM</option>
+                    <option value='YYYY'>YYYY</option>
+                    <option value='HH:00'>HH</option>
+                    <option value='HH:mm'>HH:mm</option>
+                </select><br />
+            </div>
+            <div class='settings'>
+                <span class='title'>Title: <input type='text' setFilt="title" required autofocus /></span>
+                Select Group: <select setFilt='group' class='type'>
+                {{#each tile_groups}}
+                    <option value='{{id}}'>{{text}}</option>
+                {{/each}}
+                </select>
+            </div>
+            <div class='filter'>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="cancelButton">Cancel</button>
+            <button class="confirmButton">Confirm</button>
+        </div>
+    </div>
+</template>

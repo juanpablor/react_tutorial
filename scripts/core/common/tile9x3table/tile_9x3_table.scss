@@ -1,0 +1,106 @@
+.tile_9x3[tile-type="table"] {
+    /* ANY STYLE IN HERE For a 1x1 Number Tile */
+
+    @media (max-width:799px) {
+
+        .dynatable-record-count {
+            color: #d5dae6;
+            font-style: italic;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 0px 0px;
+        }
+
+        .dynatable-pagination-links {
+            position: absolute;
+            padding-left: 0;
+            bottom: 8px;
+            right: 0;
+        }
+
+        .dynatable-per-page {
+            color: #d5dae6;
+            position: absolute;
+            bottom: 75px;
+            right: 2px;
+        }
+
+        .dynatable-search {
+            color: #d5dae6;
+            position: absolute;
+            bottom: 50px;
+            left: 4px;
+            margin-left: 5px;
+        }
+    }
+
+    @media (min-width:800px) and (max-width: 1049px) {
+
+        .dynatable-record-count {
+            color: #d5dae6;
+            font-style: italic;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 0px 0px;
+        }
+
+        .dynatable-pagination-links {
+            position: absolute;
+            padding-left: 0;
+            bottom: 8px;
+            right: 0;
+        }
+
+        .dynatable-per-page {
+            color: #d5dae6;
+            position: absolute;
+            bottom: 23px;
+            left: 10px;
+        }
+
+        .dynatable-search {
+            color: #d5dae6;
+            position: absolute;
+            bottom: 50px;
+            left: 4px;
+            margin-left: 5px;
+        }
+    }
+
+    @media (min-width:1050px) {
+        .dynatable-record-count {
+            color: #d5dae6;
+            font-style: italic;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 5px 5px;
+        }
+
+        .dynatable-pagination-links {
+            position: absolute;
+            padding-left: 0;
+            bottom: 12px;
+            margin: 13px;
+            margin-right: 0px;
+            right: 0;
+        }
+
+        .dynatable-per-page {
+            color: #d5dae6;
+            position: absolute;
+            bottom: 3px;
+            left: 6px;
+        }
+
+        .dynatable-search {
+            color: #d5dae6;
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            margin-left: 5px;
+        }
+    }
+}
