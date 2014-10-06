@@ -19,7 +19,7 @@ var http = require('http');
 var optimist = require('optimist');
 var path = require('path');
 var reactMiddleware = require('react-page-middleware');
-var connectRoute = require('connect-route');
+// var connectRoute = require('connect-route');
 
 var argv = optimist.argv;
 
